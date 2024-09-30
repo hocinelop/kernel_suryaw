@@ -21,7 +21,7 @@ jobs:
         NAME: Loganysl
       with:
         arch: arm64
-        compiler: gcc/12
+        compiler: clang/15
         defconfig: surya_defconfig
         image: Image.gz
 
@@ -32,3 +32,5 @@ jobs:
         path: |
           ${{ steps.build.outputs.outfile }}
           ./out/drivers/memkernel/memkernel.ko
+          ./out/arch/arm64/boot/*.img
+  
