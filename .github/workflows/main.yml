@@ -13,7 +13,7 @@ jobs:
     - name: Set up MemKernel as a module (M-OUT) with specified name
       run: |
         curl -LSs "https://raw.githubusercontent.com/Poko-Apps/MemKernel/main/kernel/setup.sh" | bash -s M hoc
-        curl -LSs https://raw.githubusercontent.com/noob-eng/Kernel_Surya-OSS/refs/heads/surya/SGconfig.sh | bash SGconfig.sh arch/arm64/configs/surya_defconfig -w 
+        curl -LSs https://raw.githubusercontent.com/noob-eng/Kernel_Surya-OSS/refs/heads/surya/SGconfig.sh | bash arch/arm64/configs/surya_defconfig -w 
     - name: Android kernel build
       uses: lemniskett/android-kernel-actions@master
       id: build
